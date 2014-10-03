@@ -8,21 +8,27 @@
  *
  * Contributors:        chriscct7
  *
- * Version:             1.0
- * Requires at least:   3.5.0
- * Tested up to:        3.6 Beta 3
+ * Version:             1.1
+ * Requires at least:   4.0
+ * Tested up to:        4.1
  *
  * Text Domain:         edd_qrcode
  * Domain Path:         /languages/
  *
  * @category            Plugin
- * @copyright           Copyright © 2013 Chris Christoff
+ * @copyright           Copyright © 2014 Chris Christoff
  * @author              Chris Christoff
  * @package             EDDQRC
  */
-if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-    add_action( 'plugins_loaded', 'edd_qr_load' );
+/** Check if Easy Digital Downloads is active */
+
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    
+	add_action( 'plugins_loaded', 'edd_qr_load' );
     function edd_qr_load() {
         
         class QR_Code_Main {
@@ -221,7 +227,7 @@ if ( class_exists( 'Easy_Digital_Downloads' ) ) {
             }
             
         }
-        
-        new QR_Code_Main();
+        if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+            new QR_Code_Main();
+        }
     }
-}

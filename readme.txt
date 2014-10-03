@@ -1,12 +1,10 @@
 === Easy Digital Downloads QR Code ===
 Contributors: chriscct7
-Requires at least: 3.4.2
-Tested up to: 3.6 Beta 3
+Requires at least: 4.0
+Tested up to: 4.1
 Contributors: chriscct7
 Donate link: http://donate.chriscct7.com/
 Tags: easy digital downloads, edd, edd qr code, edd qr, qr, qr code
-Requires at least: 3.4.2
-Tested up to: 3.6 Beta 3
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -37,8 +35,8 @@ If you'd like to help, feel free to contribute at the [GitHub Repo](https://gith
 Haven't had any yet
 
 == Changelog ==
-= 1.0.0 =
-* Initial Release
+= 1.1.0 =
+* Fixes issue with metabox display
 
 == Upgrade Notice ==
 = 1.0.0 =
